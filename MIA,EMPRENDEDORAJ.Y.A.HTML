@@ -1,0 +1,216 @@
+!DOCTYPE html>  
+<html lang="es"> <!-- idioma  -->
+<head>
+    <meta charset="UTF-8"> <!-- tildes  -->
+    <title> tienda de compus  </title>  <!--  titulo o nombre de la pagina -->
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        header {
+            background-image: url(https://images-na.ssl-images-amazon.com/images/I/71Pk+MKENwL._AC_UL600_SR600,600_.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 200px 200px;
+            text-align: center; 
+        }
+        header h1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .producto {
+            background-color: white;
+            width: 300px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .producto:hover {
+            transform: scale(1.03);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+        .boton-compra {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .boton-compra:hover {
+            background-color: #219150;
+        }
+        .contacto {
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+        .contacto a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .contacto a:hover {
+            color: #2980b9;
+        }
+
+        /* Estilos para ventana emergente */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .popup-contenido {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            animation: entrada 0.5s ease;
+        }
+        .popup-contenido img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .popup-contenido h2 {
+            margin: 0 0 10px 0;
+        }
+        .cerrar {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @keyframes entrada {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cosméticos mia emprendedora</h1>
+</header>
+
+<section class="contenedor">
+
+    <div class="producto">
+        <img src="https://static.sweetcare.com/img/prd/488/v-638531891176616795/loreal-paris-021276ol-6.webp" alt="Labial paris">
+		<h2>Hermosos Labiales</h2>
+		 <p> color Riche </p>
+        <p><strong>Q.144.99</strong></p>
+        <p>Dale un toque a tus labios</p>
+       <button class="boton-compra" <img onclick="mostrarPopup('un hermoso labial')">Comprar</button>
+	   
+        <img src="https://es.lorealparisusa.com/-/media/project/loreal/brand-sites/oap/americas/us/beauty-magazine/categories/content-push/makeup/lip_makeup_80.jpg" alt="Labial paris">
+		<h2>Hermosos Labiales</h2>
+		<p> color Dorado elegante </p>
+        <p><strong>Q.185.50</strong></p>
+        <p>Tus Labios con un toque especial</p>
+       <button class="boton-compra" <img onclick="mostrarPopup('un hermoso labial')">Comprar</button>
+	   
+	   <img src="https://www.amway.com/medias/LightUpLiquid-Matte-spb-LightYourLook-m.jpeg?context=bWFzdGVyfGltYWdlc3w4NDE5MnxpbWFnZS9qcGVnfHN5cy1tYXN0ZXIvaW1hZ2VzL2g4Yi9oOTkvOTg4MDU5NTQ5Njk5MC9MaWdodFVwTGlxdWlkX01hdHRlX3NwYl9MaWdodFlvdXJMb29rX20uanBlZ3xjNjA2MDIzNDJkZGVhNmVkMzJmNjA4ZmZmOWQyZTc2MjNkY2MxMGRiN2FmMDkzNzI1NzE0ZTM1ZThmMTFkNDE1" alt="Labial paris">
+		<h2>Hermosos Labiales</h2>
+		<p> Color: Pepper Pout 203,Midnight Orchid 204, Dragon Fruit De-light 202, etc. </p>
+        <p><strong>Q.165.00</strong></p>
+        <p>luce radiante en cada sonrisa </p>
+       <button class="boton-compra" <img onclick="mostrarPopup('un hermoso labial')">Comprar</button>
+	</div>
+	
+    <div class="producto">
+        <img src="https://m.media-amazon.com/images/I/81TuV9GzEaL._UF350,350_QL80_.jpg" alt="Sombra glitter">
+        <h2>Hermosas Sombras </h2>
+		<p> con Glittr Brilla en cada parpadeo </p>
+        <p><strong>Q.285.00</strong></p>
+        <p>Dale un brillo a tus ojos y resalta una mirada encantadora</p>
+        <button class="boton-compra" onclick="mostrarPopup('una hermosa sombra')">Comprar</button>
+		
+		 <img src="https://trends.lbel.com/co/wp-content/uploads/sites/5/2022/12/bases.jpg" alt="Sombra glitter">
+        <h2>Hermosas bases de L´BEL</h2>
+		<p> Usar según mi tipo de piel</p>
+        <p><strong>Q.190.00</strong></p>
+        <p>Dale un toque especial a tu piel, una piel hermosa requiere compromiso no un milagro</p>
+        <button class="boton-compra" onclick="mostrarPopup('una base perfecta para ti')">Comprar</button>
+		
+    </div>
+
+    <div class="producto">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAqgMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAABAUGBwEDCAL/xABJEAABAwIDBQUDBgoHCQAAAAABAAIDBBEFEiEGEzFBURQyYXGBByKhFSORscHRFiQzQlJictLw8RdTgpKiwuIlNFZzdIOTlOH/xAAbAQEAAwEBAQEAAAAAAAAAAAAAAQMEAgUGB//EACYRAAICAgEEAgIDAQAAAAAAAAABAhEDEgQTIUFRBTEUYUKBkSL/2gAMAwEAAhEDEQA/ALvJ0KYvwxwBri04iy4NiMjvuT44HKVTNPVvg3jRRQTRtkcHPkivxdexPw9Vq4uBZrvwefzuW+PrXkssbX4EeGIM/uO+5bodpcJme1kVY1znuDQMrtSfRVbUMmqJ3SOpd0Q0XYxhAaALD6kswpjhV0TnNcGmZliRx94L0H8dh1u3f9Hjv5vkKVKKq/2W6FlJa+up8NoZ62sk3dPCwve617AKP03tF2TnA/2xFETymY5lvUiy8U+oJUhNlFtDgtf/ALji9BUf8qpY76inFr2uF2uDh1BugPSELF0BlCxcLKAEIQgBCEIAQhCAEIQgBCEIDy7unyVOxVZgfkyOLopnObZ9mu96+o58FcTwS0gdFUNRNhEdTMx+0eBse15DmurLEG+oOi9H4+eOLl1GeJ8zjzzUOjGz3Hi74WNZGwlrdbyPzu587eKU02Ivqqiia4Nb+MR30AvYgC2ib+0YP/xNgX/uD7kqwqfCpK6CGHHMCnmkqGFgbWXefeboBl1OhtrzW+eXjJNp9zx8XF505KM4tIn22cW/2SxZltTSSfUuYru43XVmLxb/AAmthP59O9tvNpXKkLS+CNx5sB+C+Yzp0j9L+Hpykn6PLgHiz2tcP1mgpZS11XT27PVTw24bqVzfqKT5F6ayyqi5I9qXGwS+4okNLtZtLT27Pj9e23DM8SfB4ITpT7d7YNkDzje8AFsj6WLKfHRgN/VRKE2NjwS+IXFwtMXZkycDjv8AiTqj9pe0LB+MwUFR5Mcz7U9UftRdma2uwnQ94wTXI8g4C/0qt4eS9v0l8wrVGzHL47F4ZcNP7QsDlAMpq6cnlLAfrbcfFOMG1uAT2yYrTC/9Y7Jb6VS9NKWcClzB+cWt18FOhllwK+pF3U1bS1YvS1MEw6xyB31LeCqRbT0kpG9pYr8c1lZHs/mz4LJDnc4QVDmC5vYEBwHxXLVGXLgljVsk6FhZUFAIQhACEIQGCuS4KGTEMckpYcueWpe1uY2A946nwtddaFcqYTPLS7RyVMVNLUNhqXueyMXOXMQfgSrsP2yrLddiXUOzGHNwqOoLYamJw0qHNfHe9jqDy46+PgFD6Gjfh+2GH0sts8OKQxusbi4mA08NFMpNog7Z35CfBi24tuy/srLi7cupzWBt16qLGWWo22oqmaB8AqMUilax/EAzC3wVvh2URb2R1FI3PG5h/OBC5YZT5A6MDSN7mfQSPsXVK5vqqQx4liMVu5WzN/xk/asco7HvfFy1zNfoZ9z4L3FTh8rGF2QOcGl1uAJtdOBpz0Xh8HukG404jiFCxH0Dn2PHyVUmtqaaFoldTyOjc4uawaOy3u4gam2l76pSzCsRgbG99DUBkjg1vucSeGilEFNizp6qelwqMPneDUGGqLTI5w3gy3PE3vp5LRQtxurqJq2HCpqj5vsk3v2IIkzm99bgEt9fRWRhRjfIb9f6Mxpp4HZZYZGO10cwg6cV4qQ6OUCRpaQNQ4WKeKPFn0rdwyily0bWxsMrszojms7MQ0d4e7wHALRjW8qKenmjgrXRMz/jE0ZNw43tm4EDhx66BXRiVdR33EETrJ0p5AYwDwKZGut4X4BLaaYZLX4aK3pnE5DiZMhtdTv2YT52YnDfuvjk+kEf5FXEkt2+SmPspqb4vWxX79OHednf6iq8kKjZj5TvGWghYWVmPNBCEIAQhCAweCoCqxf2bNxKpDNm8bMrp3NLoapzQ92bkBLzPAK/yuU8OYXYzX5NJgJ90RxDrnh42vZWY42V5JaqycudsE75p+z+LmWxO4OK+/8A3d9xWjB8W9nDsew+NmzmMxVTauOOJ89S5zYpM4Dczd6dA61xb0Xvc1YbcSw9k7N3Q12bdZetuN+aiWW21eCZ9Z+0Ue+JvfPnbx8bZbq1wpFUM2zqjqPgqMxOmP4TY+y3dxFxHkWMd9qvQqosYgDds8fZbjJFIP7TLf5VViVyo9LiT1ypjCaXwWp9N4J+dTDotElOOi19M9jqiusgGK4W6mhlp962ChkbvJWsGcMe1+pPEWC31jKTE6SaIQQ4lNBURZndq3Od25DXvabi4u0D4pkkpidA0LQ+lA72qjpGdx/Y6ULKLDaSanxCbswrp376AMMxEABaGlwOhzEuB/VC3Tzx4RRYe2qfWSzRb+AU8BG6nu51g654HOORUffGGCzQB5JJUC0bsosuliOZRvySWnMDsYpaWHKZcGnijD2jWWIENk88ryXeTj0TfjArBhrJ8VjdHWirfFGZGZHzRAXzHrZ2gPj4KMueWnM1zg4X1BRv5JHEyyPe61rvcXG3qrY4XZW1TFu+0OvJSf2XySQ7VQ52uEc8MjGOtoSLH7FCTKpjsTVBlVgUpv8AN4i+L/yMtb6Sqebtjgq8nWiyY534Rdbb31XpYCysB5QIQhACEIQGDwXJBnbBjUwe57SKl2rHZXA5zzPDzXW/JMmOVuGYWAZqSKWokuWRNjbmdbiTfgF1GehxOGxRbsQia119xvri0rqiDP4kjhe/O1+fFR7DJWT7W4ZuXvkviEBaXm7nfONuTbjrdXhLtRHE9p+TcMdGSQSO6LX0z5ct9PiE+7L4xhOOb3s1IymrKV2WenexmeI8iC3Qg8iOljYghd9e0crDq7JGqxx9mX2g4m235ShppPoLwVZypv2u1OLYbtlSTYKwulqcPyvDYg82a88jw7yjFLWVl8JaSTHbckjgtT6cDUi6r8Y5tw9wG7laD1poh9iUmTb5/M+kcP3LV14+jV+TEls0YA0FkhmYo6YdvH96R4/7cH3LBw7bd+pkd9EP7qdePon8uA6zNSCpHzbvJaDg+2Lu/I31dEPqCwdn9qnaPfBbxmaPsXS5EfRP5cBFItANnHyTn+C+PnvSUfrOPuWPwUxv+uw4edV/pVi5kPRw+VBjU9ydMCxo0VRS02Q27ZFNnzHQtcOXBevwRxo96owsD/qXfuLyzZDGt6cnYnZCDmE5PiD3Vxm5GLLDWUWQuXrevk6Sbx04L0keFVUVVRxvjeHENDX+DuaWLzjKCEIQAhCEBg8FTuM4o/EtraynfSVBaaowMldC4syMGUN8BmzE8jforidwVbbaYfiGGSPxXdYhWQmRxeyis7I29wXNOp06XVHIclH/AJRZiSvuN/ZXU1fTmqjkkjmBa7IdR4H0DvDRNOz+IOwz2gYdTUVJWtpm1LqYzGFwZuXiwZqOAeGkWIABtbo0fhfQRy3oW4oycg5i+SMvF+jb3BHldWBsRSYziJhxKd1dT04e0tZXO957b3uG8Rfhc2WLBHJifdXZfk0kixgmDa3Co6ylNWI71FO02cOOTiR8L+ifmiyyWg3BFweS9RdjIyoZQGXLzltxSUljjHafSTuDK43+Cf8AaHDewYhNCSTHJd8ZP6JPD0On0KH1LDERTydqkIfmEjTrlPpr/NWuTK0kLiY8mcyHLmy33buP0ILYg5wu67eNouPl1Wg5u2SudFOC2Mgm/uv8tBrzC0tiduIIzTPBa8uLHS2czXlw09FGzJ1QuywAm73WAFzk0+tFoGk3Mmjc2rQEje1p7Q4RUwD3ZWPMoLX+Qvx1W5oAmaXNgAji97MSS3l6psxqhWx1NnDXOcSW3bZzfe8tVujmp/dDS4h1svzjdUhgGlOwvpwcxdlAJDvEePHTwW1r2ljSJIfelu07m9/PoeCbMUhwZU04t3jckWz9PRbO2RMu4gZepef3UgzXD3B8lt5c3pxofHXX+a9RGcVLmETiMaNGU3B6ack2YpD1hONOoaxhYBlcQ0jMSHeH/wBVhU1RHUwtliN2u+HgqoLXkHMybmPekA16XPwT/stjL6OXs9U9pY7uHeA5h94XL7krsT5C8RvbIxrmHM0i4IXtcnQIQhAYPBUrW+2XF4sTqaSnwalfkqHwx/OOLnWcWjQcyrrXLNIAdqcTa38q6SpbD1zlzgLePEDxKsxRUrsryS1RP/6SMWEgf8jYA2ovYt7T71+l7Wv6rTT+2bF3YhDS1GC0kZM7YpG53hzbuAI4cU1RGnj2KdG5sT8wIDSR7jt6Re3UD6tdFF8QaGbQYc06TNNO2bT88EaHxAyj0VzxRS+iiOZydHVI0WVgLKymsZ9o8N+UKA5G3niu5h69R6/cqwxKASwbxodnYNMoBJb6g+fBXMVAtrMN7DW9oiaNzNrY8A7mF3F+DlryV61sghfC2iqHsJvc3sP8OgOnHoljmtbVQufEAzd2bI+UDW3PXXoVubhbG1TniT5lwLTGW8W9Cb/HwC2U+GMiZlE8gIdmaWgDKbWP0pqxshEI/wAXljMFOJGSZnRulJ0Hrx6+Y6Lbvo2zykvpg1zLX3dyD07uvROUeG0wkikO8c6Nthmdx0trbitsWEUIN+ygnq6RxU6si0NUVXGxkH4w0mM2cI4rXHhoLLbFVtlJY2pnz58zLNDQfDvH+OqfIsOpGd2lgH9i6WRQRstlZG39mMBNWRsR1sjZAS0VLmPdbR+rHeg4fxyW7sb5/edQ1Bey2e5Iv4jT6lJmEtFsxPS/JbAT1KnUbEc+T6sgtbRh3u6Fzj7w5c+P8dFsjwnEJGgvZFGQeov589eqkIKzdNRsKsBrKqkiZDXuY/kXMN7eKkzHBwBBuCLgqH5kswzFzS1DaersKd+kcv6Lv0T0HRczXkmL9kmQsArK4OzBNlzJV7MY58vYg6XB8VbGaqVzXxUjnX98kHxFl02VzVPtlthWY1U09Pj9XH+MSAAFrWRtDjrw0AA+CsxX3oryVXcWihx29nUGM7zQioGFfOePvWvf9a900xbL458r0TocHxV7TPGXvlpHNscwJuftT+cU2wbRdpOOY/uLB3bNwzd2vxyd7Lrxvf8AVTZRbY7X0u0NDTVOPVUrHVMLSCWuZIxzh4agg/weF1yorShfY6SBWVgcSsrKaASHGKBmI0ElO62Y6sJ5O5JcsFAVLJE+GV8cgLXsJa4HkQssUl21w0RzMr4m+6/SQW4O5H1+xRxiuTtFTVdjdGFuatTFuCkg2sK2tK0tC2Zmt7zgD4lAKAbr20rENPUS23dNO4HmInAfSdEtiwqufr2cs/bcAotE0xMFkJyZgVU7vyxR+QLvuSmPAmD8pUPd+y0BRsidWMi8yxsewxy2IcNQ7mpKzB6NnFj3nq55+pKYqKli/J00TfJgUOaZOo24BVOyCkeXPDG+483OnQlPKAABYBZXDOkYXKlHLHHjuIsle1gmkniD3HRpc42J8LjVdVngqRm9kmNitqJWOwqZskz3tdJJI05S4kaAcdfHgFZiko/ZxkTa7DhLtLvMCND2DETU9mbFlud1oCL5rWtqTe/TVVtNLG/aPB443NeKeamhL28HESC9vC5sDzsp3/RbtJu92fkfd3zFm+lsTa3O/PVZpvZNjQxKink+SoI4aiOV7opJHOIa4EjUW5fzVm8UuxVHHLa2XWFlYCysxpBCEIBNiFGyupZaeTuvbZQ6PZLEd4Q+SlDQdHZ3ajysp0hSm0Q0mRWHZF4tva0DwZH95S2HZeiZ+Vknk8M+UfAX+KfUJsxSG6LBMNi7tJG7xfdx+KWRU8MP5GKNn7LQFtQoJMWWUIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhAf//Z" alt="Laptop Lenovo">
+        <h2>Lenovo IdeaPad 3</h2>
+        <p><strong>Q4,200</strong></p>
+        <p>Intel i3, 4GB RAM, 1TB HDD, Pantalla 15.6", Windows 10</p>
+        <button class="boton-compra" onclick="mostrarPopup('Lenovo IdeaPad 3')">Comprar</button>
+    </div>
+
+</section>
+
+<div class="contacto">
+    <h3>Contáctanos</h3>
+    <a href="https://wa.me/50212345678" target="_blank">📱 WhatsApp</a>
+    <a href="mailto:ventas@domotronic.com">📧 Correo</a>
+    <a href="tel:+50212345678">📞 Llamada</a>
+</div>
+
+
+<div class="popup" id="popup">
+    <div class="popup-contenido">
+        <img src="https://i.imgur.com/U9dFIdh.png" alt="Éxito">
+        <h2>¡Bienvenido, compra realizada!</h2>
+        <p id="mensajeProducto"></p>
+        <button class="cerrar" onclick="cerrarPopup()">Aceptar</button>
+    </div>
+</div>
+
+<script>
+    function mostrarPopup(producto) {
+        document.getElementById("mensajeProducto").innerText = "Has comprado: " + producto + ". vuelve pronto.";
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function cerrarPopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
